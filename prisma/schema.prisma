@@ -21,6 +21,7 @@ model User {
   accounts Account[]
   role     UserRole  @default(USER)
 
+  starredPlayground StarMark[]  
   myPlayground Playground[] 
   
   createdAt DateTime @default(now())
@@ -63,8 +64,22 @@ model Playground {
   template Templates @default(REACT)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  StarMark StarMark[] // understand why the []
+
   userId String
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   // templateFiles
 }
 
+model StarMark {
+  id String @id @default(cuid()) @map("_id") // understand what this does
+  userId String
+  playgroundId String
+  isMarked Boolean
+  createdAt DateTime @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  playground Playground @relation(fields: [playgroundId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, playgroundId])
+}
