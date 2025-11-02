@@ -1,14 +1,41 @@
-// array of routes which do not require authentication
-export const publicRoutes: string[] = [];
+/**
+ * An Array of routes that are accessible to the public
+ * These routes do not require authentication
+ * @type {string[]}
+ */
 
-// array of routes that are protected, and require authentication
-export const protectedRoutes: string[] = [];
+export const publicRoutes: string[] = [
+   
+]
 
-// array of routes accessible to the public
+/**
+ * An Array of routes that are protected
+ * These routes require authentication
+ * @type {string[]}
+ */
+
+export const protectedRoutes: string[] = [
+    "/",
+    
+]
+
+/**
+ * An Array of routes that are accessible to the public
+ * Routes that start with this (/api/auth) prefix do not require authentication
+ * @type {string[]}
+ */
+
 export const authRoutes: string[] = [
-  "/auth/sign-in", // routes that start with this prefix do not require authentication
-];
+    "/auth/sign-in",   // Added leading slash
+   
+]
 
-export const apiAuthPrefix: string = "/api/auth";
+/**
+ * An Array of routes that are accessible to the public
+ * Routes that start with this (/api/auth) prefix do not require authentication
+ * @type {string}
+ */
 
-export const DEFAULT_LOGIN_REDIRECT = "/";
+export const apiAuthPrefix: string = "/api/auth"
+
+export const DEFAULT_LOGIN_REDIRECT = "/"; // Changed to redirect to home page after login
