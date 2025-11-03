@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# vibe-code-editor  
+> A vibe-code-editor with locally running AI integration using the Ollama model.  
 
-## Getting Started
+---
 
-First, run the development server:
+## 📖 Overview  
+This repository contains a web-based code editor built with modern tools (Next.js, React, Web Containers, and AI integration via Ollama).  
+The project aims to provide a developer-friendly environment where you can write, test and interact with code alongside locally-running AI features.  
 
+---
+
+## ⚙️ Features  
+- 🎨 Web-based code editor using web containers  
+- 🤖 AI-assisted coding via local Ollama model  
+- 🔄 Full stack technologies: front-end (Next.js, React) + backend/DB (MongoDB + Prisma)    
+- 🚀 Real-time code execution/editing, immediate feedback  
+
+---
+
+## 🛠️ Tech Stack  
+- **Next.js** (React-based SSR/CSR preferrable)  
+- **React.js**  
+- **Prisma** (ORM for database interactions)  
+- **MongoDB** (database)  
+- **Web Containers** (in-browser dev environment)  
+- **Ollama** (locally running AI integration)  
+- **TypeScript** (majority of codebase)  
+
+---
+
+## 🚀 Getting Started  
+
+### 🧾 Prerequisites  
+Make sure you have:  
+- Node.js (v16+ recommended)  
+- npm or yarn  
+- MongoDB instance (local or cloud)  
+- Ollama model setup (locally), use "codellama" model for integration. 
+
+---
+
+### 📦 Installation  
 ```bash
-npm run dev
+git clone https://github.com/raiiden15/vibe-code-editor.git
+cd vibe-code-editor
+npm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+yarn install
