@@ -115,7 +115,7 @@ Instructions:
 1. Provide only the code that should be inserted at the cursor
 2. Maintain proper indentation and style
 3. Follow ${context.language} best practices
-4. Make the suggestion contextually appropriate
+4. Make the suggestion contextually appropriate, quick at the same time 
 
 Generate suggestion:`
 }

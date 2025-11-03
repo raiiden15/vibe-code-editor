@@ -209,7 +209,7 @@ const MainPlaygroundPage: React.FC = () => {
         const updatedTemplateData = JSON.parse(
           JSON.stringify(latestTemplateData)
         );
-        const updateFileContent = (items: any[]) =>
+        const updateFileContent = (items: any[]) : TemplateFile[] =>
           items.map((item) => {
             if ("folderName" in item) {
               return { ...item, items: updateFileContent(item.items) };
@@ -235,9 +235,9 @@ const MainPlaygroundPage: React.FC = () => {
         }
 
         // Use saveTemplateData to persist changes
-        const newTemplateData = await saveTemplateData(updatedTemplateData);
-        setTemplateData(newTemplateData || updatedTemplateData);
-
+        await saveTemplateData(updatedTemplateData); // returns the new data or nothing
+        // ✅ FIX: Directly update the state using the result from the async action
+        setTemplateData(updatedTemplateData);
         // Update open files
         const updatedOpenFiles = openFiles.map((f) =>
           f.id === targetFileId
